@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#090b12" />
+<meta name="description" content="Eshita Lopes — Software Engineer building reliable backend systems and Generative AI applications." />
+<title>Eshita Lopes | Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090b12;--panel:#101521;--panel2:#141b2a;--line:rgba(177,194,224,.13);--text:#eef2fb;--muted:#9aa7bd;--violet:#a78bfa;--cyan:#67e8f9;--lime:#bef264;--mono:"DM Mono",monospace;--sans:"Manrope",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 0%,rgba(91,71,173,.17),transparent 34%),radial-gradient(ellipse at 0% 42%,rgba(34,139,160,.09),transparent 30%),var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 42px));margin:auto}.mono{font-family:var(--mono);letter-spacing:.04em}.eyebrow{font:12px var(--mono);color:var(--cyan);text-transform:uppercase;letter-spacing:.16em}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:-.05em;font-size:18px}.brand span{color:var(--violet)}.navlinks{display:flex;gap:27px;color:var(--muted);font-size:12px}.navlinks a:hover{color:var(--text)}.status{font:11px var(--mono);color:var(--lime);display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime)}
+.hero{padding:100px 0 84px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}.hero h1{font-size:clamp(46px,7vw,82px);line-height:1.02;letter-spacing:-.075em;margin:20px 0 22px}.gradient{background:linear-gradient(100deg,#fff 10%,#b8a4ff 48%,#70e5ef 95%);-webkit-background-clip:text;background-clip:text;color:transparent}.intro{max-width:640px;color:#b4bfd1;font-size:17px}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:12px 18px;border-radius:9px;border:1px solid var(--line);font-size:13px;font-weight:700;transition:.2s}.btn.primary{background:linear-gradient(100deg,#a78bfa,#67e8f9);color:#080b12;border:0}.btn:hover{transform:translateY(-3px);border-color:#a78bfa}.hero-card{background:linear-gradient(145deg,rgba(167,139,250,.13),rgba(103,232,249,.04)),var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 25px 80px #0005;transform:rotate(1.5deg)}.terminal-top{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;color:var(--muted);font:11px var(--mono)}.terminal-dots{display:flex;gap:6px}.terminal-dots i{width:7px;height:7px;border-radius:50%;background:#fda4af}.terminal-dots i:nth-child(2){background:#fcd34d}.terminal-dots i:nth-child(3){background:#86efac}.terminal-body{font:12px/2 var(--mono);padding:18px 0 4px;color:#b9c5d8}.terminal-body .key{color:var(--violet)}.terminal-body .val{color:var(--cyan)}.terminal-body .comment{color:#71809a}.scan{height:4px;background:#242d40;border-radius:8px;margin:6px 0 15px;overflow:hidden}.scan span{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:8px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}.metric{border-top:1px solid var(--line);padding-top:14px}.metric strong{display:block;font-size:20px}.metric small{color:var(--muted);font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+section{padding:76px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:20px}.section-head h2{font-size:clamp(30px,4vw,43px);letter-spacing:-.06em;margin:8px 0 0}.section-note{color:var(--muted);font-size:12px;max-width:300px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.panel p{color:#b2bed0;margin:0}.focus-list{display:grid;gap:12px;margin-top:20px}.focus-item{display:flex;gap:12px;align-items:center;font-size:13px}.icon{width:31px;height:31px;border-radius:9px;background:#1c2638;display:grid;place-items:center;color:var(--cyan);font:13px var(--mono)}
+.timeline{display:grid;gap:14px}.role{display:grid;grid-template-columns:190px 1fr;gap:26px;padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.date{font:11px var(--mono);color:var(--cyan)}.role h3{margin:0;font-size:18px}.role .sub{color:var(--muted);font-size:12px;margin:3px 0 14px}.role ul{margin:0;padding-left:18px;color:#b6c1d2;font-size:13px}.role li{margin:7px 0}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{background:linear-gradient(145deg,rgba(167,139,250,.08),transparent 55%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;min-height:310px;display:flex;flex-direction:column;transition:.25s}.project:hover{transform:translateY(-5px);border-color:rgba(167,139,250,.55)}.project-top{display:flex;justify-content:space-between;align-items:center}.project-index{font:11px var(--mono);color:var(--cyan)}.project-mark{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#20263a;color:var(--violet);font-size:19px}.project h3{font-size:23px;letter-spacing:-.04em;margin:22px 0 8px}.project p{font-size:13px;color:#b2bed0;margin:0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.chip{font:10px var(--mono);padding:5px 8px;border:1px solid var(--line);border-radius:5px;color:#b7c4d8}.project-foot{margin-top:auto;padding-top:20px;color:var(--lime);font:10px var(--mono);letter-spacing:.08em}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.skillbox{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:19px}.skillbox h3{font:11px var(--mono);color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;margin:0 0 13px}.skillbox p{font-size:13px;color:#c0cada;margin:0}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.cert{padding:15px;background:var(--panel);border:1px solid var(--line);border-radius:10px;font-size:12px;color:#c1ccdc}.cert:before{content:"✦";color:var(--violet);margin-right:9px}
+.education{display:flex;justify-content:space-between;gap:20px;align-items:center}.education h3{margin:0;font-size:18px}.education p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.contact{background:linear-gradient(120deg,rgba(167,139,250,.12),rgba(103,232,249,.07));border:1px solid var(--line);border-radius:18px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.06em;margin:8px 0}.contact p{color:var(--muted);margin:0}.contact-links{display:flex;flex-direction:column;gap:12px;font:12px var(--mono);color:var(--cyan);white-space:nowrap}
+footer{padding:28px 0;color:#77849b;font:10px var(--mono);display:flex;justify-content:space-between}
+@media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:70px 0 55px;gap:32px}.hero-card{max-width:500px}.about-grid,.projects{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:10px}.skills-grid,.cert-grid{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}.contact{align-items:flex-start;flex-direction:column;padding:28px}.metrics{gap:8px}.metric strong{font-size:17px}}
+@media(max-width:440px){.wrap{width:min(100% - 28px,1120px)}.skills-grid,.cert-grid{grid-template-columns:1fr}.hero h1{font-size:48px}.metrics{grid-template-columns:1fr 1fr}.metric:last-child{display:none}footer{gap:10px;flex-direction:column}}
+
+/* Personal visual identity: SIGNAL / SYSTEMS */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(167,139,250,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.028) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
+body:after{content:"";position:fixed;width:420px;height:420px;right:-170px;top:18%;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(103,232,249,.075),transparent 68%);animation:orbDrift 13s ease-in-out infinite alternate}
+@keyframes orbDrift{from{transform:translate(-20px,-30px) scale(.9)}to{transform:translate(40px,55px) scale(1.18)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes gradientFlow{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+@keyframes scanPulse{0%,100%{opacity:.7;filter:brightness(.85)}50%{opacity:1;filter:brightness(1.35)}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero .eyebrow{animation:riseIn .65s both}
+.hero h1{animation:riseIn .8s .08s both}
+.hero .intro{animation:riseIn .8s .17s both}
+.hero .actions{animation:riseIn .8s .25s both}
+.hero-card{animation:riseIn .9s .2s both,cardFloat 7s 1.2s ease-in-out infinite alternate}
+@keyframes cardFloat{from{transform:translateY(0) rotate(1.5deg)}to{transform:translateY(-9px) rotate(-.5deg)}}
+.gradient{background-size:180% 180%;animation:gradientFlow 7s ease-in-out infinite alternate}
+.scan span{animation:scanPulse 2.8s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.project{position:relative;overflow:hidden}
+.project:after{content:"";position:absolute;inset:-1px;background:linear-gradient(115deg,transparent 20%,rgba(167,139,250,.12),rgba(103,232,249,.08),transparent 75%);transform:translateX(-130%);transition:transform .75s ease;pointer-events:none}
+.project:hover:after{transform:translateX(130%)}
+.btn{position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,rgba(255,255,255,.16),transparent);transform:translateX(-130%);transition:transform .6s}
+.btn:hover:before{transform:translateX(130%)}
+.identity-strip{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;margin:0 0 4px;color:#7f8ca3;font:10px var(--mono);letter-spacing:.18em;white-space:nowrap}
+.identity-track{display:flex;width:max-content;animation:ticker 34s linear infinite}
+.identity-track span{padding-right:42px}
+.identity-strip:hover .identity-track{animation-play-state:paused}
+.section-head h2{position:relative}
+.section-head h2:after{content:"";display:block;width:44px;height:2px;margin-top:12px;background:linear-gradient(90deg,var(--violet),var(--cyan))}
+.project:hover .project-mark{transform:rotate(-8deg) scale(1.08);transition:transform .3s}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#home">EL<span>.</span></a>
+  <nav class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="https://github.com/eshitalopes10" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+  <div class="status"><span class="dot"></span> BUILDING & LEARNING</div>
+</header>
+<main>
+<div class="wrap">
+  <section class="hero" id="home" style="border:0">
+    <div>
+      <div class="eyebrow">Software Engineer · Computer Engineering</div>
+      <h1>Building systems.<br><span class="gradient">Making AI useful.</span></h1>
+      <p class="intro">I’m Eshita Lopes — a Software Engineer focused on backend development, reliable systems and Generative AI applications. I enjoy turning complex problems into practical, thoughtfully engineered products.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn" href="mailto:eshitalopes@gmail.com?subject=Let%E2%80%99s%20connect%20-%20Portfolio%20enquiry&body=Hi%20Eshita%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0ARegards%2C">Let’s connect ↗</a><a class="btn" href="Eshita-Lopes-Resume.pdf" download>↓ Download resume</a></div>
+      <div class="metrics">
+        <div class="metric"><strong>3</strong><small>Featured projects</small></div>
+        <div class="metric"><strong>Backend + AI</strong><small>Core focus</small></div>
+        <div class="metric"><strong>2026</strong><small>Engineering graduate</small></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="terminal-top"><span>ESHITA@DEV-LAB ~ PROFILE</span><span class="terminal-dots"><i></i><i></i><i></i></span></div>
+      <div class="terminal-body">
+        <div><span class="comment">// current system profile</span></div>
+        <div><span class="key">const</span> engineer = {</div>
+        <div>&nbsp; name: <span class="val">"Eshita Lopes"</span>,</div>
+        <div>&nbsp; focus: <span class="val">["Backend", "GenAI"]</span>,</div>
+        <div>&nbsp; builds: <span class="val">"useful things"</span>,</div>
+        <div>&nbsp; mindset: <span class="val">"always learning"</span></div>
+        <div>};</div>
+        <br><div class="comment">// engineering toolkit</div>
+        <div>system.readiness</div><div class="scan"><span></span></div>
+        <div><span class="val">●</span> APIs & backend services</div>
+        <div><span class="val">●</span> LLM-powered applications</div>
+        <div><span class="val">●</span> Automation & testing</div>
+      </div>
+    </div>
+  </section>
+  <div class="identity-strip" aria-label="Engineering interests">
+    <div class="identity-track"><span>BACKEND ENGINEERING ✳ GENERATIVE AI ✳ SYSTEM RELIABILITY ✳ API DESIGN ✳ AUTOMATION ✳ SECURITY ✳</span><span>BACKEND ENGINEERING ✳ GENERATIVE AI ✳ SYSTEM RELIABILITY ✳ API DESIGN ✳ AUTOMATION ✳ SECURITY ✳</span></div>
+  </div>
+
+  <section id="about">
+    <div class="section-head"><div><div class="eyebrow">01 / The person behind the code</div><h2>Engineering with intent.</h2></div><p class="section-note">A little context on what I do and what I care about.</p></div>
+    <div class="about-grid">
+      <div class="panel"><p>I’m a Computer Engineering graduate from Xavier Institute of Engineering, Mumbai University. My work spans backend services, API development, automation and AI-powered applications. I’m particularly interested in building software that is dependable under the hood and genuinely useful to the people using it.</p></div>
+      <div class="panel"><div class="eyebrow">What I’m focused on</div><div class="focus-list">
+        <div class="focus-item"><span class="icon">01</span> Backend engineering & system reliability</div>
+        <div class="focus-item"><span class="icon">02</span> Generative AI & LLM integration</div>
+        <div class="focus-item"><span class="icon">03</span> API design, security & automation</div>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head"><div><div class="eyebrow">02 / Professional experience</div><h2>Shipping real software.</h2></div><p class="section-note">Backend development, integrations and quality engineering.</p></div>
+    <div class="timeline">
+      <article class="role">
+        <div><div class="date">JUNE 2026 — PRESENT</div><div class="sub">On-site</div></div>
+        <div><h3>Software Development Engineer</h3><div class="sub">Arcon Tech · Product: Drut</div>
+          <ul>
+            <li>Develop backend modules using C# and .NET, including Audit Logs, N Logs, Rate Limiting and User Reconciliation.</li>
+            <li>Implemented centralized logging across application modules using a Global Exception Handler and custom exception filters to improve error tracking and debugging.</li>
+            <li>Developed API rate limiting to control request traffic and protect backend services from excessive requests.</li>
+            <li>Built Country management CRUD APIs and tested Region and Zone APIs for application configuration and data management.</li>
+            <li>Implemented reconciliation workflows integrating Jira, Microsoft Azure, Active Directory and Keka.</li>
+            <li>Developed Java and Playwright automation suites for UI workflows, module-level scenarios and debugging.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Projects, not just prototypes.</h2></div><p class="section-note">A selection of systems I’ve designed and built.</p></div>
+    <div class="projects">
+      <article class="project">
+        <div class="project-top"><span class="project-index">PROJECT_01 / DEVELOPER TOOLS</span><span class="project-mark">⌘</span></div>
+        <h3>DevLens AI</h3>
+        <p>An AI-powered code review platform that connects to GitHub, analyses pull request diffs and streams actionable insights on potential bugs, security vulnerabilities and code quality.</p>
+        <div class="chips"><span class="chip">Next.js 14</span><span class="chip">TypeScript</span><span class="chip">GitHub REST API</span><span class="chip">Gemini 1.5 Flash</span><span class="chip">NextAuth.js</span><span class="chip">Tailwind CSS</span></div>
+        <div class="project-foot">GITHUB OAUTH · REAL-TIME RESPONSE STREAMING</div><a class="btn" style="align-self:flex-start;margin-top:14px" href="https://github.com/eshitalopes10?tab=repositories" target="_blank" rel="noreferrer">Explore repository ↗</a>
+      </article>
+      <article class="project">
+        <div class="project-top"><span class="project-index">PROJECT_02 / FINTECH</span><span class="project-mark">↗</span></div>
+        <h3>Stock Analyzer</h3>
+        <p>An Indian equity research dashboard with a Spring Boot REST API and pluggable market-data providers, plus a responsive interface for candlestick charts, volume analysis and stock comparisons.</p>
+        <div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Recharts</span><span class="chip">REST APIs</span></div>
+        <div class="project-foot">MODULAR SERVICES · DATA FRESHNESS INDICATORS</div><a class="btn" style="align-self:flex-start;margin-top:14px" href="https://github.com/eshitalopes10?tab=repositories" target="_blank" rel="noreferrer">Explore repository ↗</a>
+      </article>
+      <article class="project">
+        <div class="project-top"><span class="project-index">PROJECT_03 / GENERATIVE AI</span><span class="project-mark">✳</span></div>
+        <h3>Multi-Persona AI Explainer Agent</h3>
+        <p>A GenAI application that transforms documents, webpages and YouTube videos into audience-specific explanations, structured notes and voice notes across 17 languages.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Streamlit</span><span class="chip">SQLite</span><span class="chip">Docker</span><span class="chip">pytest</span></div>
+        <div class="project-foot">REUSABLE PIPELINE · CACHING · 17 LANGUAGES</div><a class="btn" style="align-self:flex-start;margin-top:14px" href="https://github.com/eshitalopes10?tab=repositories" target="_blank" rel="noreferrer">Explore repository ↗</a>
+      </article>
+      <article class="project project-extra">
+        <div class="project-top"><span class="project-index">ENGINEERING APPROACH</span><span class="project-mark">⌁</span></div>
+        <h3>Built for the details.</h3>
+        <p>Across my work, I care about modular architecture, clear API boundaries, secure request handling, automated testing and maintainability — not just getting a demo to run.</p>
+        <div class="chips"><span class="chip">API Security</span><span class="chip">Automation</span><span class="chip">CI Workflows</span><span class="chip">Error Handling</span></div>
+        <div class="project-foot">RELIABILITY IS A FEATURE</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head"><div><div class="eyebrow">04 / Technical toolkit</div><h2>Tools I work with.</h2></div></div>
+    <div class="skills-grid">
+      <div class="skillbox"><h3>Languages</h3><p>Java · JavaScript · C/C++ · SQL · C# · Python</p></div>
+      <div class="skillbox"><h3>Backend & APIs</h3><p>ASP.NET Core · .NET · Spring Boot · FastAPI · Node.js · REST APIs</p></div>
+      <div class="skillbox"><h3>AI & Generative AI</h3><p>LLM Integration · Prompt Engineering · NLP · Gemini API · OpenAI API</p></div>
+      <div class="skillbox"><h3>Frontend</h3><p>React.js · Next.js · Tailwind CSS</p></div>
+      <div class="skillbox"><h3>Data & Testing</h3><p>MySQL · SSMS · Playwright · pytest · API Testing · Automation Testing</p></div>
+      <div class="skillbox"><h3>DevOps & Security</h3><p>Git · GitHub · Docker · GitHub Actions · Maven · Postman · Swagger · Burp Suite · Wireshark · Nmap</p></div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="section-head"><div><div class="eyebrow">05 / Continuous learning</div><h2>Certifications & training.</h2></div></div>
+    <div class="cert-grid">
+      <div class="cert">AI/ML — IBM SkillsBuild</div><div class="cert">Java & SQL — QSpider</div><div class="cert">Artificial Intelligence — InterPe</div><div class="cert">AI Framework for Developers — FutureSkills</div><div class="cert">Vulnerability & Penetration Testing — Hacktify</div><div class="cert">Cybersecurity — MarCraft</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-head"><div><div class="eyebrow">06 / Education</div><h2>Strong foundations.</h2></div></div>
+    <div class="panel education"><div><h3>Bachelor of Engineering — Computer Engineering</h3><p>Xavier Institute of Engineering · Mumbai University</p></div><div style="text-align:right"><strong>7.95 / 10</strong><p>2022 — 2026</p></div></div>
+  </section>
+
+  <section id="contact">
+    <div class="contact"><div><div class="eyebrow">07 / Start a conversation</div><h2>Have an interesting<br>problem to solve?</h2><p>I’d love to connect about software engineering, backend systems and AI.</p></div>
+      <div class="contact-links"><a href="mailto:eshitalopes@gmail.com?subject=Let%E2%80%99s%20connect%20-%20Portfolio%20enquiry">✉ Email Eshita ↗</a><a href="tel:+917028126650">＋91 70281 26650</a><a href="https://linkedin.com/in/eshita-lopes-9745452a3" target="_blank" rel="noreferrer">LinkedIn profile ↗</a><a href="https://github.com/eshitalopes10" target="_blank" rel="noreferrer">GitHub repositories ↗</a><a href="Eshita-Lopes-Resume.pdf" download>↓ Download resume PDF</a></div>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="wrap"><span>© 2026 ESHITA LOPES</span><span>DESIGNED TO SHOW HOW I THINK & BUILD</span></footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{
+ const target=document.querySelector(link.getAttribute('href'));
+ if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+}));
+</script>
+
+<script>
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll('section:not(.hero), .project, .role, .skillbox, .cert, .panel');
+  revealTargets.forEach(el => el.classList.add('reveal'));
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    revealTargets.forEach(el => observer.observe(el));
+  } else {
+    revealTargets.forEach(el => el.classList.add('visible'));
+  }
+})();
+</script>
+
+</body>
+</html>
